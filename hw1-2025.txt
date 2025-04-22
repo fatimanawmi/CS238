@@ -1,0 +1,45 @@
+CS238 HW 1
+Due on April 24, Thursday, at 6pm via Gradescope.
+Please type your answers as much as possible.
+
+
+Reading: Jones and Pevzner Ch 1-4, 12; 
+Gusfield, Ch 16; JXZ, Ch 2, 10.
+
+Q1: Implement the branch-and-bound algorithm for the Partial Digest Problem
+    (PDP) as given on p. 90 of Jones and Pevzner using your favoriate
+    programming language (e.g., C, C++, Java or Python). Test your program on
+    the following three datasets. Here, each number in parentheses indicates
+    the multiplicity of the preceding number.
+
+    L1 = {2(1), 3(1), 4(1), 5(1), 6(1), 7(2), 8(2), 10(1)}.
+
+    L2 = {1(9), 2(8), 3(7), 4(6), 5(5), 6(4), 7(3), 8(2), 9(1)}.
+  
+    L3 = {1(1), 2(1), 3(2), 4(1), 5(2), 6(1), 7(1), 9(2), 10(1), 12(1), 14(1), 15(1)}.
+
+    L4 = {1(16), 2(15), 3(14), 4(13), 5(12), 6(11), 7(10), 8(9), 9(8),
+          10(9), 11(8), 12(7), 13(6), 14(5), 15(4), 16(3), 17(2), 18(1)}.
+
+    To simpify your output, please print only the number of distinct solutions
+    for each dataset (symmetric solutions are considered as the same) and up to 
+    three actual distinct solutions (in any order). Please turn in your source 
+    code as well as the above output found in each test.
+
+Q2: Problem 4.9, p. 121, of Jones and Pevzner. 
+
+Q3: Problem 4.14, p. 122, of Jones and Pevzner.  You may find some complete
+    bacterial genomes at e.g., http://www.ebi.ac.uk/genomes/bacteria.html
+    For l = 5, illustrate the frequency distributions on the bacterial genome
+    and the random string (i.e., how many 5-mers having each frequency in each
+    case) using a simple plot. In other words, your plot should show the number 
+    of distinct 5-mers (Y-axis) that occur in the bacterial genome (or random 
+    string) with each specific frequency number (X-axis). What can you observe 
+    from this comparison?
+
+Q4: Problem 12.4, p. 417, of Jones and Pevzner.  Here, "coin tossing" basically
+    means "randomization". In other words, you may assume that you can retrieve 
+    random numbers according to a specific probability distribution as we did 
+    in the Gibbs Sampler algorithm.
+
+Q5: Problem 12.6, p. 417, of Jones and Pevzner.  
