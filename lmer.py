@@ -35,7 +35,7 @@ random_dist = Counter(random_counts.values())
 df_genome = pd.DataFrame(sorted(genome_dist.items()), columns=['Occurrences', 'Num_lmers'])
 df_random = pd.DataFrame(sorted(random_dist.items()), columns=['Occurrences', 'Num_lmers'])
 
-# Plot distributions in one scatter plot, no subplots, use legends and colors
+# Plot distributions 
 plt.figure(figsize=(10, 6))
 plt.scatter(df_genome['Occurrences'], df_genome['Num_lmers'], color='blue', label='Genome')
 plt.scatter(df_random['Occurrences'], df_random['Num_lmers'], color='red', label='Random')
