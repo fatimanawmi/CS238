@@ -35,12 +35,34 @@ random_dist = Counter(random_counts.values())
 df_genome = pd.DataFrame(sorted(genome_dist.items()), columns=['Occurrences', 'Num_lmers'])
 df_random = pd.DataFrame(sorted(random_dist.items()), columns=['Occurrences', 'Num_lmers'])
 
-# Plot distributions 
+# Plot two distributions of l-mers using subplots
+plt.figure(figsize=(12, 6))
+plt.subplot(1, 2, 1)
+plt.scatter(df_genome['Occurrences'], df_genome['Num_lmers'], color='blue', alpha=0.7, label='Genome')
+plt.title(f'L-mers Distribution in Genome (l={l})')
+plt.xlabel(f'Frequency of {l}-mers')
+plt.ylabel(f'Number of distinct {l}-mers')
+plt.legend()
+plt.grid(True)
+
+
+plt.subplot(1, 2, 2)
+plt.scatter(df_random['Occurrences'], df_random['Num_lmers'], color='orange', alpha=0.7, label='Random')
+plt.title(f'L-mers Distribution in Random Sequence (l={l})')
+plt.xlabel(f'Frequency of {l}-mers')
+plt.ylabel(f'Number of distinct {l}-mers')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('lmer_distribution_both.png')
+plt.show()
+
+# plot a combined plot for genome and random sequence
 plt.figure(figsize=(10, 6))
 plt.scatter(df_genome['Occurrences'], df_genome['Num_lmers'], color='blue', label='Genome')
 plt.scatter(df_random['Occurrences'], df_random['Num_lmers'], color='red', label='Random')
 plt.title(f'L-mers Distribution (l={l})')
-plt.xlabel('Occurrences')
+plt.xlabel(f'Frequency of {l}-mers')
 plt.ylabel(f'Number of distinct {l}-mers')
 plt.legend()
 plt.grid(True)
